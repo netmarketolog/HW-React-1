@@ -6,7 +6,7 @@ export const Status = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: ${props => (props.isOnline ? '#069c06' : 'tomato')};
+  background-color: ${props => (props.isOnline ? 'green' : 'red')};
 `;
 export const Name = styled.p`
   font-weight: bold;
