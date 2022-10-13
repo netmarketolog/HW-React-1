@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const Table = styled.table`
   margin: 16px auto;
   width: 200px;
-  border: 1px solid grey;
+  border: 1px solid ${p => p.theme.colors.grey};
   border-radius: 10px;
   background-color: white;
 `;

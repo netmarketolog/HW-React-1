@@ -12,7 +12,7 @@ export const Description = styled.div`
 export const Avatar = styled.img`
   width: 150px;
   border-radius: 10%;
-  border: 1px solid grey;
+  border: 1px solid ${p => p.theme.colors.grey};
 `;
 
 export const Username = styled.p`
@@ -23,7 +23,7 @@ export const Username = styled.p`
 export const Tag = styled.p`
   font-size: 20px;
 
-  color: grey;
+  color: ${p => p.theme.colors.grey};
 `;
 
 export const Location = styled.p`
@@ -50,7 +50,7 @@ export const Stat = styled.li`
   padding: 10px;
   border: 1px solid white;
   border-radius: 8px;
-  background-color: grey;
+  background-color: ${p => p.theme.colors.grey};
 `;
 
 export const Label = styled.span`

@@ -15,7 +15,7 @@ export const Item = styled.li`
   gap: 16px;
   padding: 8px;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid ${p => p.theme.colors.grey};
   border-radius: 8px;
   &:hover {
     transform: scale(1.1);
