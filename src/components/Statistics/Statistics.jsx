@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
-import { Static } from './Static';
+import { Static } from '../Static/Static';
+import { Item, StatList, StatSection, StatTitle } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <StatSection className="statistics">
+      {title && <StatTitle>{title}</StatTitle>}
 
-      <ul className="stat-list">
+      <StatList>
         {stats.map(stat => (
-          <li className="item" key={stat.id}>
+          <Item key={stat.id}>
             <Static static={stat} />
-          </li>
+          </Item>
         ))}
-      </ul>
-    </section>
+      </StatList>
+    </StatSection>
   );
 };
 Statistics.propTypes = {

@@ -1,13 +1,16 @@
-export const FriendListItem = ({ people: { avatar, name, isOnline, id } }) => {
+import { Name, Status } from './FriendListItem.styled';
+
+export const FriendListItem = ({ people: { avatar, name, isOnline } }) => {
   return (
     <>
-      {isOnline ? (
+      {/* {isOnline ? (
         <span className="online"></span>
       ) : (
         <span className="offline"></span>
-      )}
+      )} */}
+      <Status isOnline={isOnline}>{isOnline}</Status>
       <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+      <Name className="name">{name}</Name>
     </>
   );
 };
