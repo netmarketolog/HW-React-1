@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Transaction } from '../Transaction/Transaction';
 import { List, Table } from './TransactionHistory.styled';
 
-export const TransactionHistory = ({ transactionsMarkup }) => {
+export const TransactionHistory = ({ items }) => {
   return (
     <Table>
       <thead>
@@ -14,9 +14,9 @@ export const TransactionHistory = ({ transactionsMarkup }) => {
       </thead>
 
       <tbody>
-        {transactionsMarkup.map(transaction => (
+        {items.map(transaction => (
           <List key={transaction.id}>
-            <Transaction item={transaction} />
+            <Transaction items={transaction} />
           </List>
         ))}
       </tbody>
@@ -24,7 +24,7 @@ export const TransactionHistory = ({ transactionsMarkup }) => {
   );
 };
 TransactionHistory.propTypes = {
-  transactionsMarkup: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
